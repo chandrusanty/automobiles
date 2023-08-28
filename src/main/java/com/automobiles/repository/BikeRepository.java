@@ -18,5 +18,7 @@ public interface BikeRepository extends JpaRepository<Bike, Integer>{
 	Bike getByMin();
 	@Query(value="select * from bike_details where price>=? and price<=? ",nativeQuery=true)
 	List<Bike> getByRange(int x,int y);
+	@Query(value="select * form bike_details where price<=? and price>=? ",nativeQuery=true)
+	List<Bike> getByHand(int n,int m);
 }
    

@@ -55,4 +55,9 @@ public class BikeController {
     public List<Bike> getByRange(@PathVariable int x,@PathVariable int y) {
     	return bs.getByRange(x,y);
     }
+    @GetMapping(value="/getAllBike")
+	public List<Bike> getAll() {
+		return bs.getAllBike();
+	}
+    
 }
